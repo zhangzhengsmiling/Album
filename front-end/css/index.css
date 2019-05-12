@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+[v-cloak]{
+	display: none;
+}
+
+#top-area {
+	width: 100%;
+	height: 60px;
+	background: rgba(212, 212, 212, 0.8);
+	color: gray;
+	font-size: 25px;
+	font-weight: 800;
+	font-family: "楷体";
+	line-height: 60px;
+	text-indent: 2em;
+}
+
+#route {
+	height: 25px;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+#wrapper {
+	width: 1200px;
+	height: 500px;
+	margin: 20px auto;
+	overflow-y: scroll;
+	border: 3px solid rgba(100, 100, 84, 0.2);
+	padding: 10px;
+	box-sizing: border-box;
+}
+#wrapper>.row {
+	width: 100%;
+}
+
+
+#wrapper>.row>div {
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 200px;
+}
+
+#wrapper>.row::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#wrapper>.row>div.album>img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border: 5px solid #080808;
+}
+
+#wrapper>.row>div.album>img:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#wrapper>.row>div>div>.pic {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 250px;
+	/* height: 200px; */
+}
+
+#button-area {
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#button-area>div {
+	float: left;
+	margin-left: 40px;
+}
+
+.btn {
+	width: 80px;
+	height: 30px;
+	/* background: red; */
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	background: rgb(0, 140, 186);
+	border-radius: 5px;
+}
+
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 40px;
+	background: gray;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+}
+
+.btn:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+

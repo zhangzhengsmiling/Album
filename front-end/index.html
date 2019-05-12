@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Album</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+	<div id="app" v-cloak>
+			<header id="top-area">
+		<div class="logo">
+			时光相册
+		</div>
+	</header>
+<!-- 	<div id="route">
+		this is router
+	</div> -->
+	<div id="wrapper">
+		<div class="row" v-for="(row, index) in albumList2D" :key="index" v-if="isShow">
+			<div class="album" v-for="(item, i) in albumList2D[index]" :key="i">
+				<img src="./static/images/album.jpg" :title="item" @click="getImages(item)">
+			</div>
+		</div>
+		<div class="row" v-if="!isShow">
+			<div v-for="(image, index) in imageList">
+				<div>
+					<img :src="image" alt="" class="pic">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="button-area">
+		<div class="btn" @click="createAblbum" ref="btn-add">创建相册</div>
+		<div class="btn" ref="btn-up">上传图片</div>
+		<div class="btn" ref="btn-ret" @click="goBack">返回</div>
+	</div>
+	<footer>this is footer</footer>
+	</div>
+
+	<script src="./js/vue2.5.17.min.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>
